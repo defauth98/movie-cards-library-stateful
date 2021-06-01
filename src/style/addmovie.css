@@ -1,0 +1,31 @@
+.addmovie-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+}
+
+.addmovie-form input {
+  width: 100%;
+}
+
+.addmovie-form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.addmovie-form button {
+  background-color: blue;
+  border: 1px solid blue;
+  border-radius: 0.4rem;
+  color: white;
+  font-size: 1.3rem;
+  margin: 3rem auto;
+  opacity: 0.8;
+  padding: 0.4rem;
+  width: 300px;
+}
+
+.addmovie-form button:hover {
+  opacity: 1;
+}

@@ -5,16 +5,18 @@ function TextInput(props) {
   const { value, onChange, label, testLabelID, testInputID, name } = props;
 
   return (
-    <label htmlFor={ name } data-testid={ testLabelID }>
-      {label}
-      <input
-        type="text"
-        name={ name }
-        value={ value }
-        onChange={ onChange }
-        data-testid={ testInputID }
-      />
-    </label>
+    <div className="text-input">
+      <label htmlFor={ name } data-testid={ testLabelID }>
+        {label}
+        <input
+          type="text"
+          name={ name }
+          value={ value }
+          onChange={ onChange }
+          data-testid={ testInputID }
+        />
+      </label>
+    </div>
   );
 }
 

@@ -6,6 +6,8 @@ import TextArea from './TextArea';
 import NumberInput from './NumberInput';
 import SelectInput from './SelectInput';
 
+import '../style/addmovie.css';
+
 class AddMovie extends Component {
   constructor(props) {
     super(props);
@@ -68,7 +70,7 @@ class AddMovie extends Component {
     const { title, subtitle, imagePath, storyline, rating, genre } = this.state;
 
     return (
-      <form data-testid="add-movie-form">
+      <form data-testid="add-movie-form" class="addmovie-form">        
         <TextInput
           value={ title }
           onChange={ this.handleInputChange }
@@ -94,9 +96,13 @@ class AddMovie extends Component {
           name="imagePath"
         />
         <TextArea value={ storyline } onChange={ this.handleInputChange } />
+
+        <div>
         <NumberInput value={ rating } onChange={ this.handleInputChange } />
+        </div>
 
         {this.renderSelect(genre)}
+        
 
         <button
           type="button"

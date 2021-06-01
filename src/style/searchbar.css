@@ -1,0 +1,11 @@
+form {
+  margin: 1rem 3rem;
+}
+
+form label + label {
+  margin: 0 1rem;
+}
+
+form input {
+  margin-left: 0.2rem;
+}

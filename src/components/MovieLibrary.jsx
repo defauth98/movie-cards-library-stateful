@@ -5,6 +5,8 @@ import MovieList from './MovieList';
 import SearchBar from './SearchBar';
 import AddMovie from './AddMovie';
 
+import '../style/movieLibrary.css';
+
 class MovieLibrary extends Component {
   constructor(props) {
     super(props);
@@ -84,7 +86,7 @@ class MovieLibrary extends Component {
     const movies = this.filter();
 
     return (
-      <div>
+      <div class="movie">
         <h2> My awesome movie library </h2>
         <SearchBar
           searchText={ searchText }

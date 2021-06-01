@@ -6,7 +6,7 @@ function CheckBoxInput(props) {
 
   return (
     <label htmlFor="favorites" data-testid="checkbox-input-label">
-      Mostrar somente favoritos
+      Mostrar somente favoritos: 
 
       <input
         type="checkbox"

@@ -4,6 +4,8 @@ import TextInput from './TextInput';
 import CheckBoxInput from './CheckBoxInput';
 import SelectInput from './SelectInput';
 
+import '../style/searchbar.css';
+
 class SearchBar extends Component {
   render() {
     const {
@@ -37,7 +39,7 @@ class SearchBar extends Component {
           onChange={ onSelectedGenreChange }
           options={ options }
           name="select-input"
-          label="Filtrar por gênero"
+          label="Filtrar por gênero:"
           selectTestID="select-input"
           labelTestID="select-input-label"
           optionTestID="select-option"
