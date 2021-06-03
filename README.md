@@ -11,7 +11,7 @@ Aplicação web de um biblioteca de filmes. Podendo criar, listar e filtrar por 
 
 ### :nut_and_bolt: Tecnologias
 
-Esse projeto foi desenvolvido com as seguintes técnologias:
+Esse projeto foi desenvolvido com a seguinte técnologias:
 
 - [React][reactjs]
 
