@@ -6,7 +6,7 @@ import TextArea from './TextArea';
 import NumberInput from './NumberInput';
 import SelectInput from './SelectInput';
 
-import '../style/addmovie.css';
+import '../style/components/addmovie.css';
 
 class AddMovie extends Component {
   constructor(props) {
@@ -70,49 +70,47 @@ class AddMovie extends Component {
     const { title, subtitle, imagePath, storyline, rating, genre } = this.state;
 
     return (
-      <form data-testid="add-movie-form" class="addmovie-form">        
-        <TextInput
-          value={ title }
-          onChange={ this.handleInputChange }
-          label="Título"
-          testLabelID="title-input-label"
-          testInputID="title-input"
-          name="title"
-        />
-        <TextInput
-          value={ subtitle }
-          onChange={ this.handleInputChange }
-          label="Subtítulo"
-          testLabelID="subtitle-input-label"
-          testInputID="subtitle-input"
-          name="subtitle"
-        />
-        <TextInput
-          value={ imagePath }
-          onChange={ this.handleInputChange }
-          label="Imagem"
-          testLabelID="image-input-label"
-          testInputID="image-input"
-          name="imagePath"
-        />
-        <TextArea value={ storyline } onChange={ this.handleInputChange } />
+      <div id="add-movie-container">
+        <form data-testid="add-movie-form" className="addmovie-form">
+          <TextInput
+            value={ title }
+            onChange={ this.handleInputChange }
+            label="Título"
+            testLabelID="title-input-label"
+            testInputID="title-input"
+            name="title"
+          />
+          <TextInput
+            value={ subtitle }
+            onChange={ this.handleInputChange }
+            label="Subtítulo"
+            testLabelID="subtitle-input-label"
+            testInputID="subtitle-input"
+            name="subtitle"
+          />
+          <TextInput
+            value={ imagePath }
+            onChange={ this.handleInputChange }
+            label="Imagem"
+            testLabelID="image-input-label"
+            testInputID="image-input"
+            name="imagePath"
+          />
+          <TextArea value={ storyline } onChange={ this.handleInputChange } />
+          <div>
+            <NumberInput value={ rating } onChange={ this.handleInputChange } />
+          </div>
+          {this.renderSelect(genre)}
+          <button
+            type="button"
+            data-testid="send-button"
+            onClick={ () => this.handleButtonClick(onClick) }
+          >
+            Adicionar filme
+          </button>
+        </form>
+      </div>
 
-        <div>
-        <NumberInput value={ rating } onChange={ this.handleInputChange } />
-        </div>
-
-        {this.renderSelect(genre)}
-        
-
-        <button
-          type="button"
-          data-testid="send-button"
-          onClick={ () => this.handleButtonClick(onClick) }
-        >
-          Adicionar filme
-
-        </button>
-      </form>
     );
   }
 }

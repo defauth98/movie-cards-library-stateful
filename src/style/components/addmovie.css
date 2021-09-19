@@ -1,3 +1,9 @@
+#add-movie-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
 .addmovie-form {
   display: flex;
   flex-direction: column;

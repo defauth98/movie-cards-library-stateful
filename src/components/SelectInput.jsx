@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import '../style/components/selectInput.css';
+
 function SelectInput(props) {
   const {
     label,
@@ -22,6 +24,7 @@ function SelectInput(props) {
         value={ value }
         onChange={ onChange }
         data-testid={ selectTestID }
+        className="select-input"
       >
         {options && options.map((item) => (
           <option

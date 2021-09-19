@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import MovieList from './MovieList';
-import SearchBar from './SearchBar';
-import AddMovie from './AddMovie';
+import MovieList from '../components/MovieList';
+import SearchBar from '../components/SearchBar';
+import AddMovie from '../components/AddMovie';
 
-import '../style/movieLibrary.css';
+import '../style/pages/movieLibrary.css';
 
 class MovieLibrary extends Component {
   constructor(props) {
@@ -65,8 +65,8 @@ class MovieLibrary extends Component {
 
     if (searchText.length > 1) {
       filteredMovies = filteredMovies.filter((movie) => movie.title.includes(searchText)
-      || movie.subtitle.includes(searchText)
-      || movie.storyline.includes(searchText));
+        || movie.subtitle.includes(searchText)
+        || movie.storyline.includes(searchText));
     }
 
     if (bookmarkedOnly === true) {
@@ -86,7 +86,7 @@ class MovieLibrary extends Component {
     const movies = this.filter();
 
     return (
-      <div class="movie">
+      <div className="movie-page">
         <h2> My awesome movie library </h2>
         <SearchBar
           searchText={ searchText }
@@ -96,8 +96,8 @@ class MovieLibrary extends Component {
           selectedGenre={ genre }
           onSelectedGenreChange={ this.handleGenderInput }
         />
-        <MovieList movies={ movies } />
-        <AddMovie onClick={ this.addMovie } />
+        {/* <MovieList movies={ movies } /> */}
+        {/* <AddMovie onClick={ this.addMovie } /> */}
       </div>
     );
   }

@@ -4,8 +4,6 @@ import TextInput from './TextInput';
 import CheckBoxInput from './CheckBoxInput';
 import SelectInput from './SelectInput';
 
-import '../style/searchbar.css';
-
 class SearchBar extends Component {
   render() {
     const {
@@ -24,7 +22,10 @@ class SearchBar extends Component {
     ];
 
     return (
-      <form action="" data-testid="search-bar-form">
+      <form
+        action=""
+        data-testid="search-bar-form"
+      >
         <TextInput
           value={ searchText }
           onChange={ onSearchTextChange }
@@ -34,16 +35,18 @@ class SearchBar extends Component {
           name="searchInput"
         />
         <CheckBoxInput checked={ bookmarkedOnly } onChange={ onBookmarkedChange } />
-        <SelectInput
-          value={ selectedGenre }
-          onChange={ onSelectedGenreChange }
-          options={ options }
-          name="select-input"
-          label="Filtrar por gênero:"
-          selectTestID="select-input"
-          labelTestID="select-input-label"
-          optionTestID="select-option"
-        />
+        <div>
+          <SelectInput
+            value={ selectedGenre }
+            onChange={ onSelectedGenreChange }
+            options={ options }
+            name="select-input"
+            label="Filtrar por gênero:"
+            selectTestID="select-input"
+            labelTestID="select-input-label"
+            optionTestID="select-option"
+          />
+        </div>
       </form>
     );
   }

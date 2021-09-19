@@ -1,12 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import '../style/components/textInput.css';
+
 function TextInput(props) {
   const { value, onChange, label, testLabelID, testInputID, name } = props;
 
   return (
-    <div className="text-input">
-      <label htmlFor={ name } data-testid={ testLabelID }>
+    <div className="input-container">
+      <label
+        htmlFor={ name }
+        data-testid={ testLabelID }
+        className="input-label"
+      >
         {label}
         <input
           type="text"
@@ -14,6 +20,7 @@ function TextInput(props) {
           value={ value }
           onChange={ onChange }
           data-testid={ testInputID }
+          className="input-text"
         />
       </label>
     </div>
